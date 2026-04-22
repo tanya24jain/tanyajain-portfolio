@@ -6,77 +6,98 @@
 <style>
 body {
   margin:0;
-  font-family: Arial;
-  background:#0f172a;
-  color:white;
+  font-family: 'Segoe UI', sans-serif;
+  background:#020617;
+  color:#e2e8f0;
 }
+
 
 .navbar {
   position:fixed;
-  top:0;
   width:100%;
-  background:#1e293b;
+  background:#020617;
   padding:12px;
   text-align:center;
-  z-index:1000;
+  border-bottom:1px solid #1e293b;
 }
 
 .navbar a {
-  color:white;
-  margin:10px;
+  color:#94a3b8;
+  margin:12px;
   text-decoration:none;
-  font-weight:bold;
+  font-size:14px;
 }
 
-.section {
-  padding:90px 20px;
-  max-width:900px;
-  margin:auto;
-}
-
-h1,h2 {
+.navbar a:hover {
   color:#38bdf8;
 }
 
-/* PROFILE */
-.profile {
+
+.hero {
   text-align:center;
-  margin-top:70px;
+  padding-top:100px;
 }
 
-.profile img {
-  width:160px;
-  height:160px;
+.hero img {
+  width:170px;
+  height:170px;
   border-radius:50%;
-  border:4px solid #38bdf8;
-  object-fit:cover;
+  border:3px solid #38bdf8;
 }
 
-/* CARDS */
+.hero h1 {
+  color:white;
+}
+
+.tagline {
+  color:#94a3b8;
+  max-width:600px;
+  margin:auto;
+}
+
+
+.section {
+  max-width:1000px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.section h2 {
+  color:white;
+  margin-bottom:20px;
+}
+
+/* CARD */
 .card {
-  background:#1e293b;
+  background:#020617;
+  border:1px solid #1e293b;
   padding:20px;
-  margin-top:20px;
   border-radius:12px;
-  line-height:1.6;
+  margin-bottom:20px;
+  line-height:1.7;
+}
+
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
 }
 
 
 button {
-  padding:10px 20px;
+  padding:10px 18px;
   border:none;
-  border-radius:8px;
+  border-radius:6px;
   background:#38bdf8;
-  cursor:pointer;
   margin:5px;
-  font-weight:bold;
+  cursor:pointer;
 }
 </style>
 
 </head>
 
 <body>
-
 
 <div class="navbar">
 <a href="#about">About</a>
@@ -87,123 +108,224 @@ button {
 <a href="#contact">Contact</a>
 </div>
 
+<div class="hero">
 
-<div class="profile">
 <img src="profile.jpg.jpeg" alt="Tanya Jain">
-<h1>Tanya Jain</h1>
-<p>M.Tech CSE (Machine Learning) | Deep Learning | NLP | Computer Vision</p>
 
-<a href="https://github.com/tanya24jain"><button>GitHub</button></a>
-<a href="https://www.linkedin.com/in/tanya-j/"><button>LinkedIn</button></a>
+<h1>Tanya Jain</h1>
+
+<p style="color:#94a3b8;">
+Machine Learning Engineer · Deep Learning · NLP · Computer Vision
+</p>
+
+<div style="margin-top:10px; font-size:14px; color:#94a3b8;">
+Firozabad, India · 
+<a href="mailto:tjtanyajain24@gmail.com" style="color:#38bdf8;">tjtanyajain24@gmail.com</a> · 
+<a href="tel:+917453048045" style="color:#38bdf8;">+91-7453048045</a>
+</div>
+
+<br>
+
+<a href="https://github.com/tanya24jain">
+<button>GitHub</button>
+</a>
+
+<a href="https://www.linkedin.com/in/tanya-j/">
+<button>LinkedIn</button>
+</a>
+
 </div>
 
 
 <div id="about" class="section">
-<h2>About</h2>
+<h2>Professional Summary</h2>
 <div class="card">
-<p>
-M.Tech Computer Science student specializing in Machine Learning with hands-on experience in Deep Learning, Natural Language Processing, and Computer Vision. 
-Worked on CNN architectures such as ResNet50 and VGG16 for deepfake detection and applied Grad-CAM for model interpretability.
-</p>
-</div>
-</div>
+M.Tech Computer Science student specializing in Machine Learning with hands-on experience in deep learning and computer vision.
+Built and evaluated CNN-based models such as ResNet50 and VGG16 for deepfake detection, achieving high accuracy and applying Grad-CAM for model interpretability.
 
+Experienced in Natural Language Processing using BART for abstractive summarization, along with strong skills in data preprocessing, feature engineering, and model development.
+
+Actively seeking opportunities in Machine Learning and Data Science to build impactful, real-world intelligent systems.
+</div>
 
 <div id="experience" class="section">
 <h2>Experience</h2>
+
 <div class="card">
 <b>Web Development Intern – Oasis Infobyte</b><br>
-Developed responsive web applications using HTML, CSS, and JavaScript.<br><br>
+<small>May 2022 – June 2022 | HTML, CSS, JavaScript</small>
+<ul>
+<li>Developed multiple frontend projects including a portfolio website, landing page, and temperature converter.</li>
+<li>Built responsive and functional web applications using HTML, CSS, and JavaScript.</li>
+<li>Applied responsive design principles to ensure compatibility across different devices and screen sizes.</li>
+<li>Designed clean and user-friendly interfaces with focus on usability and visual appeal.</li>
+</ul>
+</div>
 
+<div class="card">
 <b>Web Development Intern – 1Stop IIT Bombay</b><br>
-Built dynamic UI, implemented validation, and improved user experience.
-</div>
+<small>Feb 2022 – April 2022 | HTML, CSS, JavaScript</small>
+<ul>
+<li>Worked as a web developer building dynamic webpages using HTML, CSS, and JavaScript.</li>
+<li>Implemented features like form validation and interactive UI components.</li>
+<li>Added animations and dynamic content loading to enhance user experience.</li>
+<li>Ensured cross-browser compatibility and improved overall UI design.</li>
+</ul>
 </div>
 
+</div>
 <div id="skills" class="section">
 <h2>Skills</h2>
+
+<div class="grid">
+
 <div class="card">
-<b>Machine Learning & AI:</b> CNN, NLP, Deep Learning<br>
-<b>Programming:</b> Python, Java, C++, JavaScript<br>
-<b>Libraries:</b> TensorFlow, Keras, OpenCV, Hugging Face<br>
-<b>Optimization:</b> PSO, ACO
-</div>
+<b>Machine Learning & AI</b><br>
+Classification, Regression, CNN, Deep Learning, NLP, Model Evaluation, Feature Engineering
 </div>
 
+<div class="card">
+<b>Optimization Techniques</b><br>
+Particle Swarm Optimization (PSO), Ant Colony Optimization (ACO)
+</div>
+
+<div class="card">
+<b>Programming Languages</b><br>
+Python, Java, C++, JavaScript
+</div>
+
+<div class="card">
+<b>Libraries & Frameworks</b><br>
+TensorFlow, Keras, Scikit-learn, NumPy, Pandas, OpenCV, Hugging Face Transformers
+</div>
+
+<div class="card">
+<b>Web Development</b><br>
+HTML, CSS, React.js, Node.js, Express.js
+</div>
+
+<div class="card">
+<b>Databases</b><br>
+SQL
+</div>
+
+<div class="card">
+<b>Tools & Platforms</b><br>
+Git, GitHub, Dash, Plotly
+</div>
+
+</div>
+</div>
 
 <div id="projects" class="section">
 <h2>Projects</h2>
 
 <div class="card">
-<b>Deepfake Video Detection using CNN, VGG16, ResNet50 and Grad-CAM</b>
-<p>
-Developed deep learning models to detect manipulated videos using CNN architectures including VGG16 and ResNet50. 
-Used the Celeb-DF dataset with 6500+ videos and extracted 168K frames using OpenCV. 
-Handled class imbalance and trained models on balanced dataset.
-
-Achieved 88.70% accuracy using ResNet50. Evaluated using precision, recall, and F1-score. 
-Applied Grad-CAM to visualize important regions and improve model explainability.
-</p>
+<b>Deepfake Video Detection using CNN, VGG16, ResNet50 and Grad-CAM</b><br>
+<small>Python | TensorFlow | Keras | OpenCV | NumPy | Pandas</small>
+<ul>
+<li>Developed deep learning models using CNN, VGG16, and ResNet50 to detect deepfake videos from the Celeb-DF dataset.</li>
+<li>Designed a preprocessing pipeline using OpenCV for frame extraction, face detection, resizing, and normalization.</li>
+<li>Worked on a large-scale dataset of 6500+ videos and extracted ~168K frames (15K real, 143K fake).</li>
+<li>Handled class imbalance by creating a balanced dataset for effective model training.</li>
+<li>Trained models on 30K+ images using proper train, validation, and test splits.</li>
+<li>Achieved highest accuracy of <b>88.70%</b> using ResNet50 (CNN: 84.04%, VGG16: 82.62%).</li>
+<li>Evaluated models using precision, recall, and F1-score.</li>
+<li>Applied Grad-CAM to visualize important regions and improve model interpretability.</li>
+</ul>
 </div>
 
 <div class="card">
-<b>News Summarization using BART and Ant Colony Optimization</b>
-<p>
-Built an abstractive text summarization system using BART model. 
-Used Ant Colony Optimization to improve summary relevance and coherence. 
-Reduced redundancy by 25%.
-</p>
+<b>News Summarization using BART and Ant Colony Optimization</b><br>
+<small>Python | Hugging Face | NLP | ACO | NumPy | Pandas</small>
+<ul>
+<li>Developed an abstractive text summarization system using the BART transformer model.</li>
+<li>Implemented Ant Colony Optimization (ACO) to improve summary selection based on relevance and coherence.</li>
+<li>Experimented with multiple decoding strategies to enhance fluency and reduce repetition.</li>
+<li>Reduced redundant content by approximately <b>25%</b> compared to baseline methods.</li>
+<li>Evaluated performance using NLP metrics and manual qualitative analysis.</li>
+</ul>
 </div>
 
 <div class="card">
-<b>Student Performance Prediction using PSO</b>
-<p>
-Developed ML model using Particle Swarm Optimization for feature optimization. 
-Achieved ~85% accuracy and created dashboard using Dash and Plotly.
-</p>
+<b>Student Performance Prediction using Particle Swarm Optimization (PSO)</b><br>
+<small>Python | Scikit-learn | PSO | Dash | Plotly</small>
+<ul>
+<li>Built a machine learning model to predict student pass/fail outcomes using academic data.</li>
+<li>Applied Particle Swarm Optimization (PSO) to optimize feature weights and improve model accuracy.</li>
+<li>Performed data preprocessing including missing value handling, normalization, and feature selection.</li>
+<li>Achieved approximately <b>85% accuracy</b>, outperforming baseline models.</li>
+<li>Developed an interactive dashboard using Dash and Plotly for visualization.</li>
+<li>Evaluated performance using accuracy, precision, recall, and F1-score.</li>
+</ul>
 </div>
 
 <div class="card">
-<b>Aynra – E-commerce Website (MERN Stack)</b>
-<p>
-Developed full-stack e-commerce platform with authentication, cart, and payment integration.
-</p>
+<b>Aynra – E-commerce Website (MERN Stack)</b><br>
+<small>MongoDB | Express.js | React.js | Node.js</small>
+<ul>
+<li>Developed a full-stack e-commerce platform similar to Flipkart using MERN stack.</li>
+<li>Implemented key features such as authentication, product listing, cart, and payment integration.</li>
+<li>Optimized MongoDB queries and backend APIs to improve performance.</li>
+<li>Designed a responsive and user-friendly UI using React.js.</li>
+</ul>
 </div>
 
 <div class="card">
-<b>Employee Management System (Java)</b>
-<p>
-Built system for managing employee records with role-based access.
-</p>
+<b>Employee Management System (Java)</b><br>
+<small>Java | OOP | File Handling</small>
+<ul>
+<li>Built a system to manage employee records and operations using Java.</li>
+<li>Implemented modules for employee details, attendance tracking, and performance management.</li>
+<li>Developed secure login system with role-based access control.</li>
+<li>Created user-friendly interfaces for adding, updating, and deleting records.</li>
+</ul>
 </div>
 
 </div>
-
 
 <div id="education" class="section">
 <h2>Education</h2>
 
 <div class="card">
-<b>M.Tech in Computer Science (Machine Learning)</b><br>
-Dayalbagh Educational Institute (2024–Present)<br>
-Coursework: ML, DL, NLP, Computer Vision
+<b>Master of Technology (M.Tech) in Computer Science (Machine Learning)</b><br>
+<small>Dayalbagh Educational Institute, Agra, Uttar Pradesh | 2024 – Present</small>
+<ul>
+<li>Specialization in Machine Learning with focus on real-world AI applications.</li>
+<li>Relevant Coursework: Machine Learning, Deep Learning, Natural Language Processing, Computer Vision, Data Mining, Optimization Techniques.</li>
+</ul>
 </div>
 
 <div class="card">
-<b>B.Tech in Computer Science & Engineering</b><br>
-CGPA: 8.8 | Walchand Institute of Technology<br>
-Coursework: DSA, DBMS, OS, CN, AI
+<b>Bachelor of Technology (B.Tech) in Computer Science & Engineering</b><br>
+<small>Walchand Institute of Technology, Solapur, Maharashtra | 2019 – 2023</small>
+<ul>
+<li>Graduated with a CGPA of <b>8.8</b>.</li>
+<li>Relevant Coursework: Data Structures and Algorithms, Database Management Systems, Operating Systems, Computer Networks, Object-Oriented Programming, Artificial Intelligence.</li>
+</ul>
 </div>
 
 </div>
-
 
 <div id="contact" class="section">
 <h2>Contact</h2>
-<div class="card">
-<p>Email: tjtanyajain24@gmail.com</p>
-</div>
-</div>
 
+<div class="card">
+<p><b>Location:</b> Firozabad, India</p>
+<p><b>Email:</b> <a href="mailto:tjtanyajain24@gmail.com">tjtanyajain24@gmail.com</a></p>
+<p><b>Phone:</b> <a href="tel:+917453048045">+91-7453048045</a></p>
+
+<br>
+
+<a href="https://www.linkedin.com/in/tanya-j/">
+<button>LinkedIn</button>
+</a>
+
+<a href="https://github.com/tanya24jain">
+<button>GitHub</button>
+</a>
+
+</div>
+</div>
 </body>
 </html>
